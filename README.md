@@ -1,4 +1,4 @@
-# Ezora-FVS
+# Ezora Form Validation System (Ezora FVS)
 
 Basit form doğrulamalarını kolaylaştırmak için tasarlanmış, JavaScript kullanan bir kütüphane.
 (Şuan geliştirilme aşamasında)
