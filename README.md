@@ -1,7 +1,13 @@
-# Ezora Form Validation System (Ezora FVS)
+# EzoraFVS CDN Branch
 
-Basit form doğrulamalarını hızlı ve kolay bir şekilde yapmanızı sağlayan, JavaScript tabanlı bir kütüphane. (Şu an geliştirilme aşamasında)
+Cdn dalında EzoraFVS kodlarını barındırır.
 
-EZFVS veya Ezora FVS veya Ezora Form Validation System hepsi aynı anlamdadır. **Hepsi birbirinin kısaltması; çok da kafaya takmayın :)**
+Erişeceğiniz dosya genellikle
+`v{sürüm}.ezorafvs.js` şeklindedir.
 
+jsDelivr aracılığı ile:
+Sayfanıza eklerken 
+`v{sürüm}.ezorafvs.min.js`
+şeklindeki dosyayı dahil etmenizi öneririz. Orijinal dosyanın sıkıştırılmış halidir. 
+  
 Copyright © 2025 Ezora Form Validation System  
