@@ -4,7 +4,7 @@ class EzoraFVS {
   
   static v = (() => {
   
-  const version = "1.0.0"; 
+  const version = "1.0.1"; 
   
   document.addEventListener("DOMContentLoaded", main);
   
@@ -33,9 +33,12 @@ class EzoraFVS {
     const form = e.target.closest("form[ezfvs-set]");
     if(!form) return;
     e.preventDefault();
-      
-    if(form.hasAttribute("_clear-all")) form.querySelectorAll("[_if], [_if-checked]").forEach(input => input.value = "");
-    else form.querySelectorAll("[_clear]").forEach(input => input.value = "");
+    const clear = input => {
+      if(input.type === "radio" || input.type === "checkbox") input.checked = false;
+      else input.value = "";
+    };
+    if(form.hasAttribute("_clear-all")) form.querySelectorAll("[_if], [_if-checked]").forEach(input => clear(input));
+    else form.querySelectorAll("[_clear]").forEach(input => clear(input));
     
     {
      const el = form.querySelector("[_show-password]");
@@ -128,5 +131,4 @@ class EzoraFVS {
     
    return version;
 })()
-  
-}
+};
