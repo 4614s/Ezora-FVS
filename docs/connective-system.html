@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr" data-prfx="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="../components/all.js"></script>
+  <script src="../codes/docs-in-connective-system.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.min.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>Bağlantı sistemi</title>
+</head>
+<body>
+  
+  <c-header></c-header>
+  
+  <main class="c-p">
+    
+    <span class="text-lg mb-0 mt-2">Dokümantasyon 5</span>
+     <h2 class="mt-0 capitalize">Bağlantı sistemi</h2>
+     
+     <p>
+       Bağlantı sistemi javascript içindeki <span class="text-yellow-600">"change"</span> (değişim) olayı ile alanları dinler ve koşula bağlı hata/başarı mesajı gösterme ile bir şifre alanındaki şifreyi gösterme/geri gizleme işlemlerini yapabilmenize olanak tanır.
+     </p>
+     
+     <p>İlk olarak izlenecek alana _id özniteliği ile bir ad verilir. Verilen ad sayfada diğer hiçbir alana verilmemelidir. Ardından bu alana bağlanacak etikete _connect özniteliğinde hedefin adını yazın.</p>
+    
+    <h3 class="mt-10">Şifreyi göster kutucuğu</h3>
+    
+    <p>Bir şifre alanında bağlandıktan sonra _connect özniteliği taşıyan elemana _show-password özniteliği verirseniz işaretlendiğinde bağlandığı şifre alanındaki şifreyi gösterir</p>
+    
+    <pre>Html<code class="language-html rounded" id="code1"></code></pre>
+    
+    <div class="c-ip-output">
+      <div class="font-mono mb-6">Çıktı:</div>
+      <div id="output1"></div>
+    </div>
+    
+    <h3 class="mt-10">Koşula bağlı hata/başarı mesajı</h3>
+    
+    <p>_if veya _if-checked özniteliğine sahip bir alana bağlandıktan sonra _connect özniteliği taşıyan elemana _if-valid özniteliği verirseniz koşul sağlanında görünür, _if-invalid özniteliği verirseniz koşul sağlanmadığında görünür.</p>
+     
+    <pre>Html<code class="language-html rounded" id="code2"></code></pre>
+    
+    <div class="c-ip-output">
+      <div class="font-mono mb-6">Çıktı:</div>
+      <div id="output2"></div>
+    </div>
+    
+  </main>
+  
+  <c-footer></c-footer>
+  
+</body>
+</html>

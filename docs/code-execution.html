@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr" data-prfx="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="../components/all.js"></script>
+  <script src="../codes/docs-in-code-execution.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.min.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>Form doğrulamasına göre kod çalıştırma</title>
+</head>
+<body>
+  
+  <c-header></c-header>
+  
+  <main class="c-p">
+    
+    <span class="text-lg mb-0 mt-2">Dokümantasyon 6</span>
+    <h2 class="mt-0 capitalize">Form doğrulamasına göre kod çalıştırma</h2>
+    
+    <p>
+      Şimdiye kadar sadece form doğrulamasına göre uyarı mesajı göndermeyi biliyordunuz. Şimdi gerçek kod çalıştırmayı öğreneceksiniz.
+    </p>
+    
+    <p class="mt-10">_valid özniteliği form doğrulaması başarılı olursa kendi kodunu çalıştırır. _invalid özniteliği ise form doğrulaması başarısız olursa kendi kodunu çalıştırır.</p>
+    
+    <pre>Html<code class="language-html rounded" id="code1"></code></pre>
+    
+    <div class="c-ip-output">
+      <div class="font-mono mb-6">Çıktı:</div>
+      <div id="output1"></div>
+    </div>
+    
+    <h3 class="mt-10">Birşey farkettiniz mi? 🧐</h3>
+    
+    <p>
+      Üstteki kod hem güvensiz hem de okunaksız. Ne yapabiliriz?
+    </p>
+    
+    <h4>Çokta düşünmeye gerek yok! Farklı bir javascript dosyasında fonksiyon tanımlayıp burada kullanacağız</h4>
+    
+    <pre>Js<code class="language-js rounded" id="code2"></code></pre>
+    
+    <pre>Html<code class="language-html rounded" id="code3"></code></pre>
+    
+    <p>Yine aynı çıktıyı alırız ama daha güvenli ve okunabilir bir şekilde.</p>
+    
+  </main>
+  
+  <c-footer></c-footer>
+  
+</body>
+</html>

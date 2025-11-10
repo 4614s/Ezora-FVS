@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr" data-prfx="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="https://ezora.pages.dev/unavaible-files/cdntags.js"></script>
+  <script src="../components/all.js"></script>
+  <script src="../codes/docs-in-cdn.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.min.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>Giriş: EzoraFVS'i CDN ile dahil etme ve ilk kodumuz</title>
+</head>
+<body>
+  
+  <c-header></c-header>
+  
+  <main class="c-p">
+    
+    <span class="text-lg mb-0 mt-2">Dokümantasyon 1</span>
+    <h2 class="mt-0 mb-10 capitalize">Giriş: EzoraFVS'i CDN İle dahil etme ve İlk EzoraFVS kodumuz</h2>
+    
+    <h3>Dahil etme</h3>
+    <p>
+      Aşağıdaki kodu kopyalayın ve sayfanızın <span class="bg-gray-800 text-gray-400 font-mono">&lt;<span class="text-red-400">head</span>&gt;</span> etiketi içine yapıştırın.
+    </p>
+    
+    <pre><span class="flex justify-between">
+        <span>Html</span> 
+        <span class="copytext cursor-pointer hover:text-gray-400">Kopyala</span>
+      </span><code class="language-html rounded" id="code1"></code>
+    </pre>
+    
+    <h3>İlk EzoraFVS kodumuz</h3>
+    <p>
+      Aşağıdaki basit kodu kopyalayın sayfanızın <span class="bg-gray-800 text-gray-400 font-mono">&lt;<span class="text-red-400">body</span>&gt;</span> etiketi içine yapıştırın.
+    </p>
+    
+    <pre><span class="flex justify-between">
+        <span>Html</span> 
+        <span class="copytext cursor-pointer hover:text-gray-400">Kopyala</span>
+      </span><code class="language-html rounded" id="code2"></code>
+    </pre>
+    
+    <p>
+      Eğer çıktı şu şekilde ise dahil etme süreci başarılı geçmiştir.
+    </p>
+    
+    <div class="c-ip-output">
+      <div class="font-mono mb-6">Çıktı</div>
+      <div id="output1"></div>
+    </div>
+    
+    <h4>Peki bu kod ne yapıyor ve EzoraFVS'in temel çalışma mantığı nasıl?</h4>
+    
+    <p>İşte özeti:</p>
+    
+    <div class="my-6 border-1 border-gray-900 border-solid rounded p-2">
+      <b class="text-yellow-600 dark:text-yellow-500">ezfvs-set özniteliği</b> ile bu formun bir EzoraFVS formu olduğunu belirtip EzoraFVS'i kullanabiliriz. <span class="text-gray-400">(EZFVS, EzoraFVS'in kısaltmasıdır.)</span>
+    </div>
+      
+    <div class="my-6 border-1 border-gray-900 border-solid rounded p-2">
+      <b class="text-yellow-600 dark:text-yellow-500">_valid-msg</b> form doğrulaması başarılıysa ekrana uyarı mesajı verir <b class="text-yellow-600 dark:text-yellow-500">_invalid-msg</b> ise başarız olursa uyarı mesajı verir.
+    </div>
+    
+    <div class="my-6 border-1 border-gray-900 border-solid rounded p-2">
+      <b class="text-yellow-600 dark:text-yellow-500">_if-checked</b> kullanıldığı işaret kutusunun koşulunu işaretlendi olarak ayarlar. Yani işaretlendi ise koşul doğru işaretlenmedi ise koşul yanlış sayılır. 
+    </div>
+    
+    <div class="my-6 border-1 border-gray-900 border-solid rounded p-2">
+      <b class="text-yellow-600 dark:text-yellow-500">_if-checked</b> bir kısaltmadır. _if="$checked" olarak yorumlanır. Kafanız karışmasın ikiside aynı.
+    </div>
+    
+    <div class="my-6 border-1 border-gray-900 border-solid rounded p-2">
+      <b class="text-yellow-600 dark:text-yellow-500">EzoraFVS formlarının doğrulanması</b> form içindeki tüm _if özniteliklerinin koşullarının doğru olması sonucunda başarılı geçer eğer bir koşul bile yanlış ise doğrulama başarısız olur.
+    </div>
+    
+  </main>
+ 
+  <c-footer></c-footer>
+</body>
+</html>

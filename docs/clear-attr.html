@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr" data-prfx="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="../components/all.js"></script>
+  <script src="../codes/docs-in-clear.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.js"></script> 
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>_clear özniteliği</title>
+</head>
+<body>
+  
+  <c-header></c-header>
+  
+  <main class="c-p">
+    <span class="text-lg mb-0 mt-2">Dokümantasyon 3</span>
+    <h2 class="mt-0 capitalize">_clear özniteliği</h2>
+    
+    <p class="mb-10">
+      _clear özniteliği basit bir işleve sahiptir. Tek yaptığı şey verildiği alanın değerini form gönderildikten sonra temizlemesidir. Eğer bir işaret kutusuna verilirse form gönderildikten sonra işareti kaldırır.
+    </p>
+    
+    <p>
+      _clear kullanılmış bir alanın kodu.
+    </p>
+    <pre>Html<code class="language-html rounded" id="code1"></code></pre>
+    
+    <h3 class="mt-8">Sizce hangisi daha göze hoş geliyor?</h3>
+    
+    <div class="c-ip-output mb-6">
+      <div class="font-mono">_clear kullanılmamış form</div>
+      <div id="output1" class="mb-8"></div>
+      <span class="cursor-pointer hover:text-gray-400" onclick="showCode(this)">Kodu göster</span>
+    </div>
+    
+    <pre class="[display:none]">Html<code class="language-html rounded" id="code2"></code></pre>
+    
+    <div class="c-ip-output mb-6">
+      <div class="font-mono">_clear kullanılmış form</div>
+      <div id="output2" class="mb-8"></div>
+      <span class="cursor-pointer hover:text-gray-400" onclick="showCode(this)">Kodu göster</span>
+    </div>
+    
+    <pre class="[display:none]">Html<code class="language-html rounded" id="code3"></code></pre>
+    
+    <h3 class="mt-9">Çok karmaşık formlarda tek tek _clear vermek uğraştırıcı olabilir</h3>
+    <p>
+      Eğer form etiketine _clear-all özniteliği verirseniz form içindeki tüm <span class="bg-gray-600 text-yellow-600">_if</span> ve <span class="bg-gray-600 text-yellow-600">_if-checked</span> özniteliğine sahip alanları temizler. 
+    </p>
+    
+    <pre><code class="language-html rounded">&lt;!-- Örnek kod göstermemize gerek var mı? Anladığınızı umuyoruz. --&gt;</code></pre>
+    
+  </main>
+  
+  <c-footer></c-footer>
+  
+</body>
+</html>

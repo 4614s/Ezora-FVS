@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr" data-prfx="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="../components/all.js"></script>
+  <script src="../codes/docs-in-if.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.min.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>_if Özniteliği kullanımı ve sözdizimi</title>
+</head>
+<body>
+  <c-header></c-header>
+  
+  <main class="c-p">
+    <span class="text-lg mb-0 mt-2">Dokümantasyon 2</span>
+    <h2 class="mt-0 capitalize">_if Özniteliği: Kullanımı ve Sözdizimi</h2>
+    
+    <p class="mb-10">
+      EzoraFVS'te _if özniteliğini bilmek çok önemlidir. Bu sayfada size _if özniteliğini anlatacağız. Bu sayfayı okumadan önce javascript operatörlerini ve string metotlarını bilmeniz gerekmektedir. Ayrıca dokümantasyonun giriş bölümünüde okumuş olmalısınız.
+    </p>
+    
+    <h2>_if Sözdizimi:</h2>
+    
+    <h3>_if özniteliğinde; $val, $len ve $checked olmak üzere üç özel değişken vardır</h3>
+    
+    <ul>
+      <li>
+        <span class="text-green-700 dark:text-green-500">$val</span>
+        alanın yazı değeridir. (Tipi: <span class="text-orange-400">String</span>)
+      </li>
+      
+      <li>
+        <span class="text-green-700 dark:text-green-500">$len</span>
+        alanın yazı değerinin uzunluğudur. (Tipi: <span class="text-teal-300">Number</span>)
+      </li>
+      
+      <li>
+        <span class="text-green-700 dark:text-green-500">$checked</span>
+        kutucuğun işaretlenip işaretlenmediğidir. (Tipi: <span class="text-purple-400">Boolean</span>)
+      </li>
+    </ul>
+    
+    <section id="operators">
+      <h3 class="mt-10">Operatörler</h3>
+      
+      <div class="md:flex md:justify-center md:gap-10">
+        
+        <div>
+          <h4>1. == İle != Operatörü</h4>
+    
+          <p>
+           <div class="mb-6">== operatörü değerin eşit olmasını kontrol eder.</div>
+           <div class="mb-6">!= operatörü değerin eşit olmamasını kontrol eder.</div>
+           Bu iki operatör javascript içindekilerden farklıdır. Tip dönüşümü yoktur. <span class="bg-gray-600 text-white">5 == "5"</span> yanlış çıkar mesela javascriptteki == operatörü doğru derdi.
+          </p>
+        </div>
+        
+        <div>
+          <h4>Diğer operatörler</h4>
+    
+          <p class="mb-10">
+            >, <, >=, <=, !, ||, && ... Bu operatörler javascript içindeki kullanımı ile aynıdır.
+          </p> 
+        </div>
+        
+      </div>
+    </section>
+    
+    <section id="stringmethods" class="mb-10">
+      <h3>String metotları</h3>
+      
+      <div class="md:flex md:justify-center md:gap-10">
+        <div>
+          <h4>.lower ile .upper</h4>
+    
+          <table class="border-1 border-black border-solid block">
+            <tr class="text-center">
+              <th>_if içinde kullanımı</th>
+              <th>javascriptteki karşılığı</th>
+            </tr>
+            <tr>
+              <td>x.lower</td>
+              <td>x.toLowerCase()</td>
+            </tr>
+            <tr>
+              <td>x.upper</td>
+              <td>x.toUpperCase()</td>
+            </tr>
+            <tr>
+              <td>x.lower(y)</td>
+              <td>x.toLocaleLowerCase(y)</td>
+            </tr>
+            <tr>
+              <td>x.upper(y)</td>
+              <td>x.toLocaleUpperCase(y)</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div>
+          <h4>Diğer metotlar</h4>
+    
+          <table class="border-1 border-black border-solid block">
+           <tr class="text-center">
+             <th>_if içinde kullanımı</th>
+             <th>javascriptteki karşılığı</th>
+           </tr>
+           <tr>
+             <td>x.end(y)</td>
+             <td>x.endsWith(y)</td>
+           </tr>
+           <tr>
+             <td>x.start(y)</td>
+             <td>x.startsWith(y)</td>
+           </tr>
+        </table>
+        
+        <p>.split() ile .includes() kullanımı javascriptteki ile aynıdır.</p>
+        </div>
+        
+      </div>
+      
+      <p>Bu metotlar dışındaki hiçbir metot kullanımına izin verilmez.</p>
+  
+    </section>
+    
+    <p class="text-center">
+      <span class="text-orange-600 dark:text-orange-400">Bilgi:</span> _if özniteliği sözdizimi regex (Regular expressions) desteklemez.
+    </p>
+    
+     <p class="text-center">
+       <code class="bg-gray-600 text-gray-400">$len >= 8 && $len <= 20</code> koşulunun uzunluk 8'e eşit veya 8'den büyük ve uzunluk 20'ye eşit veya 20'den küçük olmasıdır. 
+     </p>
+    
+    <h2>_if Kullanımı:</h2>
+    
+    <p>Aşağıdaki örnek kodu inceleyin. Sizce bu koddaki koşul ne?</p>
+    
+    <span class="hover:text-gray-400 cursor-pointer" onclick="alert('Alana büyük/küçük harfe duyarsız `Merhaba` yazılması.')">Cevabı görmek için buraya tıklayın.</span>
+    
+    <pre>Html<code class="language-html rounded mb-12" id="code1"></code></pre> 
+     
+    <h2>Küçük ama önemli bir bilgi</h2>
+     
+    <p>
+      <div class="mb-6">
+        _if özniteliğinin koşulu ne olursa olsun verildiği element ile herhangi bir etkileşime girilmediği sürece yanlıştır.
+      </div> 
+      Yani bir elemente kodunuzda "a" değeri verdiyseniz ve koşula <code class="bg-gray-600 text-gray-400">$val == "a"</code> gibi birşey yazarsanız kullanıcı etkileşimde bulunmadığı için koşul yanlış olacaktır ve doğrulama başarısız olur.
+    </p>
+    
+    <p>Deneyin bakalım. Sadece gönder düğmesine tıkladığınızda ne yazısı görüyorsunuz.</p>
+    
+    <pre>Html<code class="language-html rounded" id="code2"></code></pre>
+    
+    <div class="c-ip-output">
+      <div class="font-mono mb-8">Çıktı:</div>
+      <div id="output1"></div>
+    </div>
+    
+  </main>
+  
+  <c-footer></c-footer>
+</body>
+</html>

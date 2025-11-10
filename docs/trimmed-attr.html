@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr" data-prfx="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="../unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="../components/all.js"></script>
+  <script src="../codes/docs-in-trimmed.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.min.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>_trimmed özniteliği</title>
+</head>
+<body>
+   <c-header></c-header>
+   
+   <main class="c-p">
+     <span class="text-lg mb-0 mt-2">Dokümantasyon 4</span>
+     <h2 class="mt-0 capitalize">_trimmed özniteliği</h2>
+     
+     <p class="mb-10">
+       _trimmed özniteliği verildiği yazı alanının değerinin sağ/sol tarafındaki boşluklarını temizler. İsmini javascript içindeki trim isimli fonksiyondan alır.
+     </p>
+     
+     <h3>_trimmed özniteliğine hiçbir değer verilmezse sağ ve soldaki boşlukları temizler</h3>
+     
+     <p>Örnek: Basit bir boşluk kontrolü</p>
+     
+     <pre>Html<code class="language-html rounded" id="code1"></code></pre>
+     
+     <h3 class="mt-10">_trimmed özniteliğine "left" değeri verilirse soldaki, "right" değeri verilise sağdaki boşlukları temizler</h3>
+     
+     <pre>Html<code class="language-html rounded mb-6" id="code2"></code></pre>
+     
+     <pre>Html<code class="language-html rounded" id="code3"></code></pre>
+     
+     <h3 class="mt-10">Çok karmaşık formlarda tek tek _trimmed vermek uğraştırıcı olabilir</h3>
+     <p>
+       _trimmed-all özniteliği, form içindeki tüm _if ve _if-checked özniteliğine sahip alanlara _trimmed etkisi uygular.
+     </p>
+     
+     <pre>Html<code class="language-html rounded">&lt;!-- Örnek kod göstermemize gerek var mı? Anladığınızı umuyoruz. --&gt;</code></pre>
+     
+   </main>
+   
+   <c-footer></c-footer>
+</body>
+</html>
