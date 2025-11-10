@@ -1,7 +1,11 @@
-# Ezora Form Validation System (Ezora FVS)
+![EzoraFVS Logo](./images/ezfvs-logo.jpg)
 
-Basit form doğrulamalarını hızlı ve kolay bir şekilde yapmanızı sağlayan, JavaScript tabanlı bir kütüphane. (Şu an geliştirilme aşamasında)
+# EzoraFVS
 
-EZFVS veya Ezora FVS veya Ezora Form Validation System hepsi aynı anlamdadır. **Hepsi birbirinin kısaltması; çok da kafaya takmayın :)**
+### Html öznitelikleriyle form doğrulamayı kolaylaştıran hafif bir kütüphane  
+  
+🌐 https://ezfvs.pages.dev
 
-Copyright © 2025 Ezora Form Validation System  
+> **Bilgi:** Ezfvs, EzoraFVS'in kısaltmasıdır. EzoraFVS ise ...
+
+Copyright ©2025 - Ezora Form Validation System 
