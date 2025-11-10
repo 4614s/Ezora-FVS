@@ -1,0 +1,56 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark.min.css";
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap";
+
+#menu a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+#menu a:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
+ul > li, #menu a {
+  margin-block: 12px;
+}
+
+/* github icon */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+@font-face {
+  font-family: "Font Awesome 6 Free";
+  src: url("https://use.fontawesome.com/releases/v5.15.4/webfonts/fa-solid-900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
+.fas, .fa-solid {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.fa-code:before {
+  content: "\f121";
+}

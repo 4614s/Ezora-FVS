@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script src="unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="components/all.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.min.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>Kod</title>
+</head>
+<body>
+  
+  <c-header></c-header>
+  
+  <main class="c-p">
+    <pre>Js<code class="language-js rounded" id="code">Kod yükleniyor...</code></pre>
+  </main>
+  
+  <c-footer></c-footer>
+  
+</body>
+<script>
+  const url = "https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.js";
+  fetch(url)
+      .then(res => res.text())
+      .then(code => {
+        document.querySelector("#code").textContent = '// ' + url + '\n\n' + code;
+        hljs.highlightAll();
+      })
+      .catch(() => document.querySelector("#code").textContent = "// Kod yüklenemedi");
+</script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  <script src="unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="components/all.js"></script>
+  <script src="codes/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/4614s/ezora-fvs@cdn/v1.ezorafvs.min.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+  <title>EzoraFVS</title>
+</head>
+<body>
+  
+  <c-header></c-header>
+  
+  <main>
+    
+    <section id="hero"></section>
+    <div class="c-p">
+      
+    <h3>Neden EzoraFVS?</h3>
+    <h4>Basit bir doğrulama için bile onlarca satır javascript kodu yazmayın. 4-5 tane html özniteliği ile işi çözebilirsiniz.</h4>
+    <pre>Html<code class="language-html rounded" id="code1"></code></pre>
+
+    <div class="c-ip-output">
+      <div class="font-mono">Çıktı</div>
+      
+      <h3>1. Seviye zeka testi: Elmayı seçin</h3>     
+      <form ezfvs-set _valid-msg="Başarılı" _invalid-msg="Başarılı değil">
+       
+       <select _if="$val == 'elma'">
+         <option value="karpuz">🍉</option> 
+         <option value="elma">🍎</option> 
+         <option value="salatalik">🥒</option> 
+       </select>
+       
+       <input type="submit" />
+       
+      </form>
+    </div>
+    
+    <h4>_if özniteliği ile javascript benzeri bir sözdizimi ile koşul yazın</h4>
+    <pre>Html<code class="language-html rounded" id="code2"></code></pre>
+    
+  <div class="c-ip-output">
+    <div class="font-mono">Çıktı</div>
+    <h3>E-posta doğrulaması:</h3>
+
+    <form ezfvs-set _valid-msg="Başarılı" _invalid-msg="Lütfen geçerli bir e-posta formatı girin.">
+
+       <input type="text" _if="$val.includes('@') && $val.split('@')[1].includes('.')" />
+       <input type="submit" />
+ 
+     </form>
+  </div>
+  <h4>_id ile hedef alanı tanımlayın ve _connect ile hedef alana kolayca erişin</h4>
+  
+  <pre>Html<code class="language-html rounded" id="code3"></code></pre>
+  
+  <div class="c-ip-output">
+    <div class="font-mono">Çıktı</div>
+    <h3>Giriş formu</h3>
+  
+  <form ezfvs-set _valid-msg="Başarılı" _invalid-msg="Başarılı değil">
+
+   <label>
+     <div>Kullanıcı Adı:</div>
+      <input type="text" _id="username" _if="!$val.includes(' ') && $len >= 8" _trimmed />
+      <div _connect="username" _if-invalid class="text-red-500">Kullanıcı adı formatı geçersizdir</div>
+   </label>
+    
+   <label>
+      <div class="mt-4">Şifre:</div>
+      <input type="password" _id="password" _if="$len >= 8 && $len <= 20" _trimmed />
+   </label>
+   
+   <label>
+     <div class="mb-4">
+       <input type="checkbox" _connect="password" _show-password /> 
+       Şifreyi göster 
+     </div>
+   </label>
+  
+   <input type="submit" />
+  
+   </form>
+  </div>
+  
+  <h4>Değişkenler ile uzaktan yönetim de mümkün</h4>
+  <pre>Js<code class="language-js rounded mb-3" id="code4-js"></code></pre>
+  
+  <pre>Html<code class="language-html rounded" id="code4-html"></code></pre>
+  <div class="c-ip-output">
+      <div class="font-mono mb-3">Çıktı</div>
+      <form ezfvs-set _valid-msg="Başarılı" _invalid-msg="Başarılı değil">
+        
+       <div>
+         <input type="password" _if="$val == 'ruhi1234'" _id="password"/>
+       </div>
+       
+       <div>
+         <input type="checkbox" _connect="password" _show-password /> Şifreyi göster
+       </div>
+    
+       <div class="mt-2">
+         <input type="submit" />
+       </div>
+    
+      </form>
+  </div>
+  
+  </div></main>
+ 
+  <c-footer></c-footer>
+</body>
+</html>
