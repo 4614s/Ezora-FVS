@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr" data-logo-unezfvs>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="unocss.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime" defer></script>
+  <script src="components/all.js"></script>
+  <script src="https://ezora.pages.dev/unavaible-files/footer.js"></script>
+</head>
+<body>
+  <c-header></c-header>
+  
+  <main class="c-p text-center min-h-screen">
+    
+    <div class="md:flex md:justify-center md:gap-10 md:text-left">
+      
+     <img src="https://ezfvs.pages.dev/images/unezfvs-logo.jpg" class="w-48 rounded">
+      
+     <div>
+       <h1 class="text-6xl my-6 font-mono">404</h1> 
+       <h2>Aradığınız sayfa bulunamadı.</h2>
+       
+       <p><span id="path"></span> sayfası bulunamadı.</p>
+     </div>
+    
+    </div>
+
+    <a href="/" class="dark:text-white text-black mt-10 block mx-auto">Anasayfaya dön</a>
+    
+  </main>
+  
+  <c-footer></c-footer>
+  
+  <script>
+    const path = location.pathname.replace("/","");
+    document.title = `404: ${path} sayfası bulunamadı`;
+    document.querySelector("#path").textContent = path;
+  </script>
+</body>
+</html>
