@@ -108,7 +108,7 @@ function renderBtn() {
 
 function Import() {
   createLink("stylesheet", (document.documentElement.dataset.prfx ?? "") + "style.css");
-  createLink("icon", "https://ezfvs.pages.dev/images/ezfvs-logo1.jpg");
+  createLink("icon", `https://ezfvs.pages.dev/images/${document.documentElement.hasAttribute("data-logo-unezfvs") ? "unezfvs-logo" : "ezfvs-logo1" }.jpg`);
   
   function createLink(rel, href) {
     const el = document.createElement("link");
