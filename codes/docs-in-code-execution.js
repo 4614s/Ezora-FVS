@@ -35,7 +35,7 @@ const code3 = `
   
 </form>
 
-<div class="msg"></div>
+<div id="msg"></div>
 `.trim();
 
 document.addEventListener('DOMContentLoaded', () => {
