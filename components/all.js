@@ -50,6 +50,8 @@ class Header extends HTMLElement {
         <a href="/docs/connective-system">5- Bağlantı sistemi</a>
         
         <a href="/docs/code-execution">6- Form doğrulamasına göre kod çalıştırma</a>
+
+        <a href="/docs/variables">7- Değişkenler</a>
        </div>
        
       <h3 class="cursor-pointer" onclick="location.href='/'">Anasayfa</h3>
