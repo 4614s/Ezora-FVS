@@ -3,5 +3,6 @@
 /s/clear /docs/clear-attr 301
 /s/trim /docs/trimmed-attr 301
 /s/connect /docs/connective-system 301
-/s/code-ex /docs/code-execute 301
+/s/code-ex /docs/code-execution 301
 /s/vars /docs/variables 301
+/gh https://github.com/4614s/ezora-fvs 301
